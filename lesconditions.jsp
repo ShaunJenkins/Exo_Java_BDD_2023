@@ -38,11 +38,11 @@
 </p>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
-<p> <% if (intValeur3 % 2 == 0) {
-    System.out.println(intValeur3 + " est pair.");
-} else {
-    System.out.println(intValeur3 + " est impair."); 
-} %> </p>
+<p> <% if (intValeur3 % 2 == 0) { %>
+   <%  System.out.println(intValeur3 + " est pair."); %>
+<%  } else { %>
+ <%    System.out.println(intValeur3 + " est impair."); %>
+<% } %> </p>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
