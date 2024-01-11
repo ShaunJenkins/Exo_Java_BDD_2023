@@ -34,15 +34,19 @@
    
     
 <h2>Exercice 1 : Comparaison 1</h2>
-<p> <% if (intValeur1 <  intValeur3 && intValeur2 > intValeur3) %>
-</p>
+<% if (intValeur1 <  intValeur3 && intValeur2 > intValeur3) { %>
+<p> C est bien compris entre A et B </p>
+<% } else { %>
+<p> Non, C n'est pas compris entre A et B </p>
+<% } %>
+
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
-<p> <% if (intValeur3 % 2 == 0) { %>
-   <%  System.out.println(intValeur3 + " est pair."); %>
+<% if (intValeur3 % 2 == 0) { %>
+<%  System.out.println(intValeur3 + " est pair."); %>
 <%  } else { %>
- <%    System.out.println(intValeur3 + " est impair."); %>
-<% } %> </p>
+<%    System.out.println(intValeur3 + " est impair."); %>
+<% } %>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
