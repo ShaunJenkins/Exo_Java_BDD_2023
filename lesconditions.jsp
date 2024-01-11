@@ -43,9 +43,9 @@
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <% if (intValeur3 % 2 == 0) { %>
-<%  System.out.println(intValeur3 + " est pair."); %>
+<p>  C est pair. </p>
 <%  } else { %>
-<%    System.out.println(intValeur3 + " est impair."); %>
+<p>  C est impair. </p>
 <% } %>
 
 <% } %>
