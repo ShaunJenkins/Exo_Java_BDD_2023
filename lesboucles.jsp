@@ -3,7 +3,7 @@
 <head>
 <title>Boucles</title>
 </head>
-<body bgcolor=white>
+<body bgcolor=beige>
 <h1>Exercices sur les boucles</h1>
 <form action="#" method="post">
     <label for="inputValeur">Saisir le nombre d'étoiles : </label>
@@ -62,7 +62,7 @@
         <% for (int j = 1; j <= cpt-i; j++) { %>
             <%= "&nbsp" %>
         <% } %>
-        <% for (int k = 1; k <= i; j++) { %>
+        <% for (int j = 1; j <= i; j++) { %>
             <%= "*" %>
         <% } %>
        <%= "<br>" %>
