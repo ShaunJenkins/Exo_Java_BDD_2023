@@ -13,7 +13,6 @@
 
 <%-- Récupération de la valeur saisie par l'utilisateur --%>
 <% String valeur = request.getParameter("valeur"); %>
-<% int n = Integer.parseInt(valeur); %>
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
@@ -27,10 +26,15 @@
     </p>
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
-<p> for (int i = 1; i <= n; i++) { %>
+    <p>
+    <% for (int i = 1; i <= cpt; i++) { %>
+       <% for (int j = 1; j <= cpt; j++) { %>
+            <%= "<br>" %>
+        <% } %>
        <%= "*" %>
+    <% } %>
+    </p>
 
-</p>
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
