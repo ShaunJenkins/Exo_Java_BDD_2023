@@ -3,7 +3,7 @@
 <head>
 <title>Les chaines</title>
 </head>
-<body bgcolor=white>
+<body bgcolor=aquamarine>
 <h1>Exercices sur les chaines de charactères</h1>
 <form action="#" method="post">
     <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" id="inputValeur" name="chaine">
@@ -49,7 +49,11 @@
     for (int i = 0; i < chaine.length(); i++) {
         char currentChar = chaine.charAt(i);
 %>
-        <p><%= currentChar %></p>
+        <% if (currentChar == ' ') { %>
+            <br>
+        <% } else { %>
+            <p><%= currentChar %></p>
+        <% } %>
 <%
     }
 %>
@@ -58,7 +62,6 @@
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
 <%-- Affichage du texte en vertical (y compris les espaces) --%>
-<p>Texte en vertical (y compris les espaces):</p>
 <%
     for (int i = 0; i < chaine.length(); i++) {
         char currentChar = chaine.charAt(i);
