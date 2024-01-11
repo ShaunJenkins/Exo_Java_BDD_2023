@@ -57,17 +57,14 @@
     </p>
 
 <h2>Exercice 4 : Triangle rectangle 2 (aligné à droite)</h2>
-<p>
+    <p>
     <% for (int i = 1; i <= cpt; i++) { %>
-        <% for (int j = 1; j <= cpt-i; j++) { %>
-            <%= "&nbsp;" %>
+       <% for (int j = 1; j <= i; j++) { %>
+            <%= "<br>*" %>
         <% } %>
-        <% for (int k = 1; k <= i; k++) { %>
-            <%= "*" %>
-        <% } %>
-       <%= "<br>" %>
+       <%= "*" %>
     <% } %>
-</p>
+    </p>
 
 
 <h2>Exercice 5 : Triangle isocele</h2>
