@@ -57,23 +57,64 @@
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
-L'hiver</br>
-sera</br>
-pluvieux</p>
+<%-- Affichage du texte en vertical (y compris les espaces) --%>
+<p>Texte en vertical (y compris les espaces):</p>
+<%
+    for (int i = 0; i < chaine.length(); i++) {
+        char currentChar = chaine.charAt(i);
+%>
+        <p><%= currentChar %></p>
+<%
+    }
+%>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
-Exemple : L'hiver sera pluvieux</br>
-Lhvrsr lvex</p>
+<%
+    for (int i = 0; i < chaine.length(); i += 2) {
+        char currentChar = chaine.charAt(i);
+%>
+        <p><%= currentChar %></p>
+<%
+    }
+%>
 
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
-Exemple : L'hiver sera pluvieux</br>
-xueivulp ares revih'l</p>
+<%
+    for (int i = chaine.length() - 1; i >= 0; i--) {
+        char currentChar = chaine.charAt(i);
+%>
+        <p><%= currentChar %></p>
+<%
+    }
+%>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
+<%
+    int countVowels = 0;
+    int countConsonants = 0;
 
+    // Conversion du texte en minuscules pour faciliter la comparaison
+    String lowercaseText = chaine.toLowerCase();
+
+    for (int i = 0; i < lowercaseText.length(); i++) {
+        char currentChar = lowercaseText.charAt(i);
+
+        if (Character.isLetter(currentChar)) {
+            // Vérification si la lettre est une voyelle
+            if (currentChar == 'a' || currentChar == 'e' || currentChar == 'i' || currentChar == 'o' || currentChar == 'u' || currentChar == 'y') {
+                countVowels++;
+            } else {
+                countConsonants++;
+            }
+        }
+    }
+%>
+
+<p>Le nombre de voyelles dans le texte est de : <%= countVowels %></p>
+<p>Le nombre de consonnes dans le texte est de : <%= countConsonants %></p>
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
