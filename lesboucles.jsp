@@ -59,7 +59,10 @@
 <h2>Exercice 4 : Triangle rectangle 2 (aligné à droite)</h2>
     <p>
     <% for (int i = 1; i <= cpt; i++) { %>
-       <% for (int j = 1; j <= cpt-i; j++) { %>
+        <% for (int j = 1; j <= cpt-i; j++) { %>
+            <%= "&nbsp" %>
+        <% } %>
+        <% for (int j = 1; j <= cpt-i; j++) { %>
             <%= "*" %>
         <% } %>
        <%= "<br>" %>
